@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Apply is use when you are styling in CSS */
 body {
   @apply text-white bg-gray-900;
+  @apply box-content;
 }
