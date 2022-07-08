@@ -2,14 +2,23 @@ import React from "react";
 import { Pokemon } from "pokenode-ts";
 
 interface PokemonItemProps {
-  pokemon: Pokemon;
+  name: string;
+  sprites: string;
+  voteHandler: () => void;
 }
 
-const PokemonItem = ({ pokemon }: PokemonItemProps) => {
+const PokemonItem = ({ name, sprites, voteHandler }: PokemonItemProps) => {
   return (
-    <div className="w-64 h-64 ">
-      <div className="text-center capitalize mt-4">{pokemon.name}</div>
-      <img className="w-full" src={pokemon?.sprites.front_default!} />
+    <div className="text-center  w-64">
+      <div className="capitalize mt-3">{name}</div>
+      <img className=" w-64 h-64" src={sprites} />
+
+      <button
+        onClick={voteHandler}
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full text-center"
+      >
+        Vote
+      </button>
     </div>
   );
 };

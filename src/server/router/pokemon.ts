@@ -7,9 +7,8 @@ export const pokemonRouter = createRouter().query("get-by-id", {
   input: z.object({ id: z.number() }),
   async resolve({ input }) {
     const api = new PokemonClient();
-    try {
-      const pokemon = await api.getPokemonById(input.id);
-      return pokemon;
-    } catch (error) {}
+
+    const pokemon = await api.getPokemonById(input.id);
+    return { name: pokemon.name, sprites: pokemon.sprites };
   },
 });
