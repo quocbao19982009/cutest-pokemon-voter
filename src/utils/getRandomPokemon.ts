@@ -1,9 +1,9 @@
-const MAX_DEX_ID = 493;
+const MAX_DEX_ID = 459;
 
 export const getRandomPokemon: (skipPoekemon?: number) => number = (
   skipPoekemon?: number
 ) => {
-  const pokedexNumber = Math.floor(Math.random() * MAX_DEX_ID);
+  const pokedexNumber = Math.floor(Math.random() * MAX_DEX_ID + 1);
 
   if (pokedexNumber !== skipPoekemon) {
     //if not the same number

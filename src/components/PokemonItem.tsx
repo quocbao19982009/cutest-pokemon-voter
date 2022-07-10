@@ -1,6 +1,5 @@
 import React from "react";
-import { Pokemon } from "pokenode-ts";
-
+import Image from "next/image";
 interface PokemonItemProps {
   name: string;
   sprites: string;
@@ -11,7 +10,7 @@ const PokemonItem = ({ name, sprites, voteHandler }: PokemonItemProps) => {
   return (
     <div className="text-center  w-64">
       <div className="capitalize mt-3">{name}</div>
-      <img className=" w-64 h-64" src={sprites} />
+      <Image height={256} width={256} className=" w-64 h-64" src={sprites} />
 
       <button
         onClick={voteHandler}
