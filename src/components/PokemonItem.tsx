@@ -10,7 +10,13 @@ const PokemonItem = ({ name, sprites, voteHandler }: PokemonItemProps) => {
   return (
     <div className="text-center  w-64">
       <div className="capitalize mt-3">{name}</div>
-      <Image height={256} width={256} className=" w-64 h-64" src={sprites} />
+      <Image
+        alt={`${name}-image`}
+        height={256}
+        width={256}
+        className=" w-64 h-64"
+        src={sprites}
+      />
 
       <button
         onClick={voteHandler}

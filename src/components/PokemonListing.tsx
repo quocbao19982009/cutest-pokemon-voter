@@ -18,6 +18,7 @@ const PokemonListingItem = ({
       <div className="flex items-center">
         <div className="flex items-center pl-4">
           <Image
+            alt={`${pokemon.name}-image`}
             src={pokemon.spriteUrl}
             width={64}
             height={64}
